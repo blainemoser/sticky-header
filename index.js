@@ -34,10 +34,12 @@
     
     window.onscroll = function(event) {
       if (getWindowScroll().top > originalRect.top - requiredTop) {
+        var key;
         for (key in styles) {
           el.style[key] = styles[key];
         }
       } else {
+        var key;
         for (key in originalStyles) {
           el.style[key] = originalStyles[key];
         }
